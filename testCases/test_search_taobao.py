@@ -25,7 +25,9 @@ class Test_search_taobao(object):
             homePage = HomePage()
             homePage.checkSearchFieldExists()
             homePage.clickSearchField()
+            homePage.base_sleep(1)
             homePage.inputTextSearch()
+            homePage.base_sleep(3)
         with allure.step('3-断言'):
             searchResult = SearchResult()
             searchResult.checkSearchResult()

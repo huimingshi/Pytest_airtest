@@ -6,4 +6,4 @@ from common.basePage import BasePage
 class SearchResult(BasePage):
     def checkSearchResult(self):
         # 断言查询结果
-        self.base_assert_exists('LOL',(-0.305, -0.979),"断言查询结果正确")
+        self.base_assert_exists('LOL',(-0.305, -0.979),"断言查询结果")

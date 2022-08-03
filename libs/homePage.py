@@ -10,7 +10,7 @@ class HomePage(BasePage):
 
     def inputTextSearch(self):
         # 搜索框输入文本内容
-        self.base_text('LOL')
+        self.base_text('英雄联盟')
 
     def clickSearchField(self):
         # 点击搜索框

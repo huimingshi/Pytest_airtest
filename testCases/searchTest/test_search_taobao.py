@@ -15,7 +15,7 @@ from utils.get_absolute_path import reports_path
 class Test_search_taobao(object):
     @allure.story('淘宝查询功能')
     @allure.title('查询结果正确')
-    def test_search_taobao(self):
+    def test_search_taobao(self,back_to_home):
         with allure.step('1-打开淘宝'):
             start = Start()
             start.clickQKWD()
@@ -31,12 +31,12 @@ class Test_search_taobao(object):
         with allure.step('3-断言'):
             searchResult = SearchResult()
             searchResult.checkSearchResult()
-        with allure.step('4-环境恢复'):
-            keyeventLib = KeyeventLib()
-            for i in range(4):
-                keyeventLib.keycode_back()
-                keyeventLib.base_sleep(1)
-            keyeventLib.keycode_home()
+        # with allure.step('4-环境恢复'):
+        #     keyeventLib = KeyeventLib()
+        #     for i in range(4):
+        #         keyeventLib.keycode_back()
+        #         keyeventLib.base_sleep(1)
+        #     keyeventLib.keycode_home()
 
 if __name__ == '__main__':
     pytest.main(['-sv',__file__,'--alluredir', reports_path,'--clean-alluredir'])
